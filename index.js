@@ -47,10 +47,35 @@ const nestedArray = [
 const combineNumbers = nestedArray.reduce((acc, total) => acc.concat(total), []);
 console.log(combineNumbers)
 
+const fruits2 = ["apple", "banana", "apple", "cherry", "banana", "apple"];
+// const totalCount = fruits2.reduce((pre, next) => pre[next])
+
+const items = [
+    { name: "Laptop", price: 1000 },
+    { name: "Smartphone", price: 500 },
+    { name: "Tablet", price: 300 },
+];
+
+const totalAmount = items.reduce((current, next) => current + next.price, 0)
+    // console.log(totalAmount)
+
+
+
 // Filtering Arrays with filter:
 
 const evenNumber = numbers1.filter((num) => num % 2 === 0);
 // console.log(evenNumber)
+
+// Finding the Most Frequent Element in an Array:
+
+const numbers3 = [1, 2, 2, 3, 4, 4, 4, 5];
+const mostFrequentNumber = numbers3.reduce((cur, prev) => {
+    cur[prev] = (cur[prev] || 0) + 1;
+    return cur;
+}, {})
+console.log(mostFrequentNumber)
+
+
 
 const mySet = new Set([1, 2, 3, 4, 5]);
 
