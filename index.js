@@ -82,3 +82,18 @@ const mySet = new Set([1, 2, 3, 4, 5]);
 for (const item of mySet) {
     // console.log(item);
 }
+
+// Map() in javascript
+
+const people = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 },
+];
+const names = people.map((person) => person.name)
+console.log(names)
+
+const additional = 2;
+
+const scaledNumber = numbers3.map((num) => num * additional)
+console.log(scaledNumber)
