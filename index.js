@@ -148,13 +148,33 @@ const formConfig = [
     // ...
 ];
 
-const formFields = formConfig.map((field, index) => ( <
-    input key = { index }
-    type = { field.type }
-    name = { field.name }
-    placeholder = { field.label }
-    />
-));
+// const formFields = formConfig.map((field, index) => ( 
+//     <
+//     input key = { index }
+//     type = { field.type }
+//     name = { field.name }
+//     placeholder = { field.label }
+//     />
+// ));
 
 //   return <form>{formFields}</form>;
-console.log(formFields)
+// console.log(formFields)
+
+// filter in JS
+
+const values = ['amd', 'amd', 'md', 'md', 'val', 'val'];
+
+const uniqueValues = values.filter(
+    (value, index, array) => array.indexOf(value) === index
+);
+console.log(uniqueValues);
+const products = [
+    { name: "Laptop", price: 1000, quantity: 2 },
+    { name: "Smartphone", price: 500, quantity: 3 },
+    { name: "Tablet", price: 300, quantity: 1 },
+];
+const totalPricePerProduct = products.map((product) => ({
+    ...product,
+    Total: product.price * product.quantity
+}))
+console.log(totalPricePerProduct);
